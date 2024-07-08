@@ -116,3 +116,29 @@ footer > a{
     position: relative;
     overflow: hidden;
 }
+#slides {
+    display: flex;
+    overflow: hidden;
+}
+.slide {
+    width: 50%;
+    margin: 25%;
+}
+#left, #right{
+    position:absolute;
+    width:50px;
+    transform: translateY(+400px);
+    /* margin-top: 125px; */
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 25px;
+}
+#left{
+    left:20px;
+}
+#right{
+    right:20px;
+}
+button > img {
+    width :20px;
+}
