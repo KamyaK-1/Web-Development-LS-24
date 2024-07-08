@@ -1,0 +1,73 @@
+nav > a
+{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav {
+    background-color: black;
+    overflow: hidden;
+    margin: 0px;
+}
+p,li,footer,a,dd {
+    font-size: 18px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color : #151617C2;
+}
+dt {
+    font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color : #151617C2;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+footer {
+    text-align: center;
+}
+.below_img {
+    font-style: italic;
+}
+h1 {
+    font-size:45px;
+}
+h2 {
+    font-size:35px;
+}
+h3 {
+    font-size:25px;
+}
+
+.chess_board {
+    width: min(720px,90%);
+}
+.pieces {
+    width : min(30%,300px);
+    margin-left: 10%;
+    margin-bottom: 20px;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+.column {
+    flex: 1;
+    min-width: 150px; /* Adjust based on your needs */
+    margin: 10px;
+}

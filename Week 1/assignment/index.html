@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess</title>
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+            <a href="index.html"> ChessHub</a>
+            <a href = "./highlights.html">History</a>
+            <a href = "./learn.html">Play</a>
+        
+        
+    </nav>
+    <h1>
+        Overview
+    </h1>
+    <p>
+        Chess is a board game for two players. It is played on a 8x8 chessboard. The players, referred to as "White" and "Black", each start with 16 pieces. <br>
+        This included eight pawns, two rooks, two bishops, two knights, one king and one queen. The players alternate turns to move their pieces with White moving first.
+        Not all the pieces are of the same kind. Each of them is moved differently. The objective of the game is to checkmate the opponent's king.
+    </p>
+    <div style="display: flex;align-content: center;flex-direction: column;justify-items: center;align-items: center;">
+        <img  class="chess_board" src="images/start_board.png">
+        <p class="below_img"> This is how the starting position looks like</p>
+    </div>
+    <h2>
+        Pieces
+    </h2>
+
+    <p>
+        As mentioned above there are a total of 6 types of pieces. No piece can move outside the board. In the diagrams, darkened circles mark the squares where the piece can move. A brief description of each is given below:
+    </p>
+        <h3>Pawn</h3>
+            <p> A pawn can move forward to the unoccupied square immediately in front of it on the same file, or on its first move it can advance two squares along the same file, provided both squares are unoccupied.A pawn can capture an opponent's piece on a square diagonally in front of it by moving to that square (black crosses). It cannot capture a piece while advancing along the same file, nor can it move to either square diagonally in front without capturing.</p>
+            <picture>
+                <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;justify-items: center;"> 
+                    <img src="images/pawn1.png" alt="Pawn1" class="pieces">
+                    <p> A pawn on starting square can move two squares</p>
+                </div>
+                <img src="images/pawn2.png" alt="Pawn1"  class="pieces">
+            </picture>
+        <h3>Knight</h3>
+            <p> A knight moves in a "L" shaped pattern. It moves two moves vertically and one move horizontally or one move vertically and two horizontally. It is the only piece that can leap over other pieces. </p>
+            <picture>
+                <img src="images/knight.png" alt="Knight" class="pieces">
+            </picture>
+        <h3> Rook </h3>
+            <p>A rook can move any number of squares along a rank or file, but cannot leap over other pieces.</p>
+            <picture>
+                <img src="images/rook.png" alt="Knight" class="pieces">
+            </picture>
+            <h3>Bishop</h3>
+            
+            <p>A bishop can move any number of squares diagonally, but cannot leap over other pieces.</p>
+            <picture>
+                <img src="images/bishop.png" alt="Knight" class="pieces">
+            </picture>
+            <h3>Queen</h3>
+                <p>A queen combines the power of a rook and bishop and can move any number of squares along a rank, file, or diagonal, but cannot leap over other pieces.</p>
+            <picture>
+                <img src="images/queen.png" alt="Knight" class="pieces">
+            </picture>
+                <h3>King</h3>
+        <p>
+            The king moves one square in any direction. There is also a special move called castling which involves moving both the king and a rook. The king is the most important piece in the game. If the king is under attack and cannot escape, it is said to be in checkmate and the game is over. 
+        </p>
+        <picture>
+            <img src="images/king.png" alt="Knight" class="pieces">
+        </picture>
+    <p>
+        <b>Remember:</b> All pieces, except for knights, cannot move over any other piece on the board, regardless of whether it belongs to their own side or the opponent. The piece's movement is said to be <i>blocked</i>.
+    </p>
+    <h2>
+        Special Moves
+    </h2>
+    <h3>
+        Checks and Checkmates
+    </h3>
+    <p>
+        When a player's king is under threat of capture, it is said to be in check. The player must make a move that eliminates the threat of capture. If the player cannot make a move that eliminates the threat of capture, the king is said to be in checkmate and the game is over.
+        There are 3 ways to defend in case of a check:
+    </p>
+        <ul>
+            <li>Move the king to a square where it won't be under attack</li>
+            <li>Block the check by placing a piece between the king and the attacking piece</li>
+            <li>Capture the attacking piece</li>
+        </ul>
+        <p>
+        Remember that castling is not a valid move in case of a check even though the king might go to a safe square.
+        In case of a double check (i.e when two pieces are attacking the king), the king must move to a square where it is not under attack. The king cannot capture the attacking piece or block the check.
+        </p>
+        <img src="images/check.png" class="pieces">
+        <p>
+        In the diagram above, the check can be tackled by 3 ways: the rook capturing the bishop, the pawn blocking the attack or the king moving to either of 3 three squares which are safe.
+        </p>
+    <h3>
+        Castling
+    </h3>
+    <p>
+        Castling consists of moving the king two squares and then playing the rook (on the same side where king castled) and then placing the rook on the square over which the king crossed. The conditions for castling are:
+        <ul>
+            <li>Neither the king nor the rook in consideration have previously moved under the game. Even if the piece returns back to their original square, castling will be invalid</li>
+            <li>The king is not in check and does not cross a square which is under attack</li>
+            <li>There are no pieces between the rook and king</li>
+        </ul>
+        
+    </p>
+    <h3>
+        En Passant
+    </h3>
+    <p>
+        When a pawn moves two squares from its starting position and lands next to an opponent's pawn, the opponent's pawn can capture the first pawn as if it had moved only one square. This move must be made immediately after the first pawn has moved. If the opponent does not capture the pawn immediately, the right to capture the pawn is lost.
+    </p>
+    <h3>
+        Pawn Promotion
+    </h3>
+    <p>
+        This is probably the most interesting move in chess. When a pawn reaches the opposite end of the board, it can be promoted to any other piece except a king. The player can choose to promote the pawn to a queen, rook, bishop or knight.Though in most cases, we see the player promoting to a queen, it is not always necessary and in some cases, promoting to a queen might even be bad as that can lead to stalemate. 
+    </p>
+    <h2>
+        End of game
+    </h2>
+    <p>
+        The game can end either if one players manages to checkmate the opponent or if it draws. A draw can happen in the following ways:
+        <ul>
+            <li>
+                <h3>Stalemate</h3>
+                <p>
+                    If the player to move, does not have any legal moves and the king is not in check, it is a stalemate. 
+                </p>
+            </li>
+            <li>
+                <h3>
+                    Threefold repetition
+                </h3>
+                <p>
+                    As clear by its name, if the same position occurs three times with the same player to move, the game is a draw. In such a case the player can claim a draw. The three occurrences of the position need not occur on consecutive moves for a claim to be valid though usually, they do. This mostly occurs when either of the players can't avoid repeating moves without leading to a bad position.
+                </p>
+            </li>
+            <li>
+                <h3>
+                    Fifty-move rule
+                </h3>
+                <p>
+                    If in the last 50 moves, no pawn has been moved and no piece has been captured, the game is a draw. This is to prevent players from playing on indefinitely in a clearly drawn position.
+                </p>
+            </li>
+            <li>
+                <h3>
+                    Insufficient material
+                </h3>
+                <p>
+                    If neither player has enough material to checkmate the opponent, the game is a draw. For example, if one of the players has a knight and a king and the other player has only a king, the game is a draw as there is no way for any player to win the game.
+                </p>
+            </li>
+
+        </ul>
+    </p>
+    <h1>
+        Theory
+    </h1>
+    <p>
+        A chess game can be divided into 3 phases: opening,middlegame and endgame. 
+        </p>
+        <h2>Opening</h2>
+        <p> The first few moves of the game can be grouped in opening moves . The players battle to control the key squares especially the central 4 squares. Getting your pieces to good/active squares where they will have optimal impact on the game is the main aim. Middlegame is when the players come up with plans to improve the position and attack.   Here I will discuss about some ways on how you can get started at chess. Getting your king to safety is crucial. The safety is enhanced by a well-timed castle. A lot of sequences are recognized and a lot of times, 
+            newbies focus on learning the openings rather than improving their middlegame or endgame. Though it does help, learning a ton of openings this early isn't gonna help you much.    </p>
+        <h2>
+            Middlegame
+        </h2>
+        <p>
+            There is no clear distinction between the opening and middlegame. It typically starts when the pieces get developed. The middlegame is when the players come up with plans to improve the position and attack. 
+            Because the opening theory has ended, players have to form plans based on the features of the position, and at the same time take into account the tactical possibilities of the position.
+            Middlegame combinations are often connected with an attack against the opponent's king.
+            There are various factors that can influence exchanges in the middlegame. Some of them are:
+        </p>
+            <dl>
+                <dt>Pawn Structure</dt>
+                <dd>
+                    When exchanging pieces or pawns, it is quite possible that one player recaptures with a pawn. It then becomes important for that person to check if that leads to a doubled pawn or not. They are usually considered weak as they can't protect each other. 
+                    But that does create some open files which can be used to attack the opponent's king especially by placing a rook on that file. Having pawns in front of your king also helps in defense.
+                </dd>
+                <br>
+                <dt>
+                    Bishop vs Knights
+                </dt>
+                <dd>
+                    Closed positions usually favor knights as they can jump over other pieces. But in open positions, bishops are usually better as their range of movement is much more than that of a knight.
+                    A bishop pair can help tremendously to put pressure on opponent's king.
+                </dd>
+                <br>
+                <dt>
+                    Transitioning to Endgame 
+                </dt>
+                <dd>
+                    The middlegame is also about transitioning to the endgame. Minor material advantages can generally be transformed into victory only in an endgame.
+                    Though exchanging pieces does help in simplifying the position, it is not always the best.
+                    Players should also try to get a passed pawn as it can be promoted to a queen and is quite a pain for the other person to deal with.
+                </dd>
+            </dl>
+        <p>
+            Players should also look out for tactical opportunities to win material. Tactics are short term move sequences that they can be calculated by a player. Obviously the depth of calculation depends on the player's skill level.
+            Some common tactical patterns one must look for are:
+        </p>
+            <div class="flex-container">
+                <div class="column">
+                    <ul>
+                        <li><a href = "https://en.wikipedia.org/wiki/Pin_(chess)" target="_blank">Pins</a></li>
+                        <li><a href = "https://en.wikipedia.org/wiki/Fork_(chess)" target="_blank">Forks</a></li>
+                        <li><a href = "https://en.wikipedia.org/wiki/Skewer_(chess)" target="_blank">Skewers</a></li>
+                        <li><a href = "https://en.wikipedia.org/wiki/Zwischenzug" target="_blank">Zwischenzug("Intermediate move")</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <ul>
+                        <li><a href = "https://en.wikipedia.org/wiki/Discovered_attack" target="_blank">Discovered Attacks </a></li>
+                        <li><a href= "https://en.wikipedia.org/wiki/Deflection_(chess)" target="_blank">Deflections</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Decoy_(chess)" target="_blank">Attractions</a></li>
+                    </ul>
+                </div>
+            </div> 
+            <p>
+            Checkout <a href="https://lichess.org/training/themes">lichess.org</a> for practising tactics.
+        </p>
+        <h2>
+            Endgame
+        </h2>
+        <p>
+            The endgame (also end game or ending) is the stage of the game when there are few pieces left on the board.
+            Here are some general principles that might help you:
+        </p>
+            <ul>
+                <li>
+                    Though it must be kept safe, and the rest of the pieces should safeguard it, the king is an extremely strong piece in the endgame. It is often brought to the center where it can protect its own pawns, attack enemy pawns, and hinder moves of the opponent's king.e center of the board.
+                </li>
+                <li>
+                    Pawns become more important. Endgames often revolve around endeavors to promote a pawn by advancing it to the furthest rank.
+                </li>
+                <li>
+                    Knowing basic checkmates is immensely important. They can help you make decisions in complex endgames positions.
+                </li>
+            </ul>
+               
+               
+
+        
+    <footer>
+        To learn more visit <a href="https://lichess.org">Lichess.org</a>
+    </footer>
+</body>
+</html>
