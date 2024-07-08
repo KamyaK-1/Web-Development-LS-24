@@ -8,7 +8,14 @@ nav > a
     text-decoration: none;
     font-size: 20px;
 }
-
+#x {
+    display: flex;
+}
+@media screen and (max-width: 600px) {
+    #x {
+        flex-direction: column;
+    }
+}
 nav {
     background-color: black;
     overflow: hidden;
@@ -20,11 +27,23 @@ p,li,footer,a,dd {
     font-family: sans-serif;
     color : #151617C2;
 }
+li > a {
+    width: 40%;
+    white-space: nowrap;
+    overflow-wrap: break-word;
+    overflow: hidden;
+}
 dt {
     font-size: 22px;
     font-weight: 400;
     font-family: sans-serif;
     color : #151617C2;
+}
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
 }
 a {
     text-decoration: none;
@@ -52,9 +71,19 @@ h3 {
     width: min(720px,90%);
 }
 .pieces {
-    width : min(30%,300px);
-    margin-left: 10%;
+    width : max(40%,250px);
     margin-bottom: 20px;
+}
+.text_pic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+}
+.text_pic > p {
+    text-align: center;
 }
 .flex-container {
     display: flex;
@@ -70,4 +99,20 @@ picture {
     flex: 1;
     min-width: 150px; /* Adjust based on your needs */
     margin: 10px;
+}
+iframe {
+    width: max(600,90%);
+    display: block;
+}
+footer > a{
+    text-decoration: underline;
+}
+.games{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    overflow: hidden;
 }

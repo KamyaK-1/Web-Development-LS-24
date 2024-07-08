@@ -11,8 +11,6 @@
             <a href="index.html"> ChessHub</a>
             <a href = "./highlights.html">History</a>
             <a href = "./learn.html">Play</a>
-        
-        
     </nav>
     <h1>
         Overview
@@ -22,7 +20,7 @@
         This included eight pawns, two rooks, two bishops, two knights, one king and one queen. The players alternate turns to move their pieces with White moving first.
         Not all the pieces are of the same kind. Each of them is moved differently. The objective of the game is to checkmate the opponent's king.
     </p>
-    <div style="display: flex;align-content: center;flex-direction: column;justify-items: center;align-items: center;">
+    <div class="text_pic">
         <img  class="chess_board" src="images/start_board.png">
         <p class="below_img"> This is how the starting position looks like</p>
     </div>
@@ -35,13 +33,16 @@
     </p>
         <h3>Pawn</h3>
             <p> A pawn can move forward to the unoccupied square immediately in front of it on the same file, or on its first move it can advance two squares along the same file, provided both squares are unoccupied.A pawn can capture an opponent's piece on a square diagonally in front of it by moving to that square (black crosses). It cannot capture a piece while advancing along the same file, nor can it move to either square diagonally in front without capturing.</p>
-            <picture>
-                <div style="display: flex;justify-content: center;align-items: center;flex-direction: column;justify-items: center;"> 
+            <div  id = "x">
+                <div class = "text_pic">
                     <img src="images/pawn1.png" alt="Pawn1" class="pieces">
                     <p> A pawn on starting square can move two squares</p>
                 </div>
-                <img src="images/pawn2.png" alt="Pawn1"  class="pieces">
-            </picture>
+                <div class = "text_pic">
+                    <img src="images/pawn2.png" alt="Pawn1"  class="pieces">
+                    <p> A pawn captures diagnolly</p>
+                </div>
+            </div>
         <h3>Knight</h3>
             <p> A knight moves in a "L" shaped pattern. It moves two moves vertically and one move horizontally or one move vertically and two horizontally. It is the only piece that can leap over other pieces. </p>
             <picture>
@@ -67,9 +68,10 @@
         <p>
             The king moves one square in any direction. There is also a special move called castling which involves moving both the king and a rook. The king is the most important piece in the game. If the king is under attack and cannot escape, it is said to be in checkmate and the game is over. 
         </p>
-        <picture>
+        <div class="image">
             <img src="images/king.png" alt="Knight" class="pieces">
-        </picture>
+        </div>
+        
     <p>
         <b>Remember:</b> All pieces, except for knights, cannot move over any other piece on the board, regardless of whether it belongs to their own side or the opponent. The piece's movement is said to be <i>blocked</i>.
     </p>
@@ -92,7 +94,9 @@
         Remember that castling is not a valid move in case of a check even though the king might go to a safe square.
         In case of a double check (i.e when two pieces are attacking the king), the king must move to a square where it is not under attack. The king cannot capture the attacking piece or block the check.
         </p>
-        <img src="images/check.png" class="pieces">
+        <div class="image">
+            <img src="images/check.png" class="pieces">
+        </div>
         <p>
         In the diagram above, the check can be tackled by 3 ways: the rook capturing the bishop, the pawn blocking the attack or the king moving to either of 3 three squares which are safe.
         </p>
@@ -120,6 +124,9 @@
     <p>
         This is probably the most interesting move in chess. When a pawn reaches the opposite end of the board, it can be promoted to any other piece except a king. The player can choose to promote the pawn to a queen, rook, bishop or knight.Though in most cases, we see the player promoting to a queen, it is not always necessary and in some cases, promoting to a queen might even be bad as that can lead to stalemate. 
     </p>
+    <div class="image">
+        <img src="images/promotion.png" class="pieces">
+    </div>
     <h2>
         End of game
     </h2>
