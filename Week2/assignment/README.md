@@ -1,1 +1,1 @@
-In order to run this website on your local computer 
+In order to run this website on your local computer you need to download reactjs on your desktop. After installing these dependencies and make a folder named assignment (same as here) run the command "npm start" and you should be able to view the website on your browser.
