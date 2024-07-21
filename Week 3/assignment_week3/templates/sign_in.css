@@ -1,0 +1,20 @@
+#signup {
+    color:white;
+    text-decoration: none;
+    font-size: medium;
+  }
+  #signup:hover{
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  #input_form{
+    background-image: url('bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #sign_in{
+    font-size: larger;
+    text-align: center;
+  }

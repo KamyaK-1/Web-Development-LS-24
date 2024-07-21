@@ -1,0 +1,18 @@
+#input_form{
+    background-image: url('bg_1.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#signin {
+    text-decoration: none;
+    color:white;
+    font-size: medium;
+}
+#signin:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+#signup{
+    font-size: larger;
+    text-align: center;
+}

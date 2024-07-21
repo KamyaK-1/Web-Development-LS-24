@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'signup_and_signin.css' %}">
+    <link rel="stylesheet" href="{% static 'sign_up.css' %}">
+    <link rel="stylesheet" href="{% static 'navbar.css' %}">
+
+</head>
+<body  style="margin:0;">
+    
+        {% for message in messages %}
+        <div class="popup open-popup" id="popup" >
+            <h2>{{ message }}</h2>
+            <button type="button" onclick="close_popup()">OK</button>
+        </div>
+        {% endfor %}
+    <div id="blur">
+   
+    <div id="navbar">
+        <a id="home" class="hovered" href="/">Home</a>
+    
+        {% if user.is_authenticated %}
+        <a href="/signout">Sign Out</a>
+        {% else %}
+        
+                <a href="/signup" class="hovered">Sign Up</a>
+                <a href="/signin" class="hovered">Sign In</a>
+            
+        {% endif %}
+    </div>
+    <div id="input_form">
+        <div id="login-box">
+          <p id="signup">Create Account</p>
+            <form action="/signup" method="post" id="sign_up_form">
+                {% csrf_token %}
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" required>
+                <br>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+                <br>
+                <label for="date_of_birth">Date of Birth</label>
+                <input type="date" name="date_of_birth" id="date_of_birth" value="2000-01-01" required>
+                <br>
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" required>
+                <br>
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" name="confirm_password" id="confirm_password" required>
+                <br>
+                <button type="submit">Sign Up</button>
+                <div style="font-size: medium;text-align: center;margin-top: 20px;">
+                    <span id="check_for_account">Already have an account? </span>
+                    <a href="/signin" id="signin">Sign in</a>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    </div>
+</body>
+<script>
+    if (document.getElementById("popup").classList.contains("open-popup"))
+    {
+        document.getElementById("blur").classList.add("blurred-effect");
+    }
+    function close_popup()
+    {
+        document.getElementById("popup").classList.remove("open-popup");
+        document.getElementById("blur").classList.remove("blurred-effect");
+    }
+</script>
+</html>

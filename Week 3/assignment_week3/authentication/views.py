@@ -14,6 +14,18 @@ def signup(request):
         re_password = request.POST["confirm_password"]
         dob = request.POST["date_of_birth"]
 
+        if User.objects.filter(username=username):
+            messages.error(request,"Username already exists!")
+            return redirect("home")
+        if User.objects.filter(email=email):
+            messages.error(request,"Email address already in use")
+            return redirect("home")
+        if password != re_password:
+            messages.error(request,"Passwords do not match!")
+            return redirect("home")
+        if not username.isalnum():
+            messages.error(request,"Username should only contain letters and numbers")
+            return redirect("home")
         myUser = User.objects.create_user(username,email,password)
         myUser.date_of_birth = dob
 
@@ -37,4 +49,6 @@ def signin(request):
             return render(request,"index.html",{"user":user})
     return render(request,"signin.html")
 def signout(request):
-    return render(request,"signout.html")
+    logout(request)
+    messages.success(request,"Logged out successfully")
+    return redirect("home")
